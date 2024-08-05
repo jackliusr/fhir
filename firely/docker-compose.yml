@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+
+  vonk-web:
+    image: firely/server
+    ports:
+      - "8080:4080"
+    environment:
+      - VONK_Repository=SQLite
+      - VONK_Administration:Repository=SQLite
+      - VONK_License:LicenseFile=./license/firelyserver-license.json
+      - VONK_SizeLimits:MaxBatchSize=10MiB
+      - VONK_SizeLimits:MaxResourceSize=10MiB
+    volumes:
+      - .:/app/license
