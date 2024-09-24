@@ -6,6 +6,8 @@ services:
     image: healthsamurai/aidboxdb:16.1
     volumes:
     - aidbox_pg_data:/data:delegated
+    ports:
+    - 6432:5432
     environment:
       POSTGRES_USER: aidbox
       POSTGRES_PORT: '5432'
