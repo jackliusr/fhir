@@ -38,3 +38,4 @@ services:
       PGPASSWORD: 9ZeQDaNUAO
       PGPORT: '5432'
       BOX_SEARCH_INCLUDE_CONFORMANT: true
+      BOX_SEARCH_ENGINE: JSONpath
